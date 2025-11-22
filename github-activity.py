@@ -44,3 +44,5 @@ if __name__ == "__main__":
 # testing test
 
 # grrr
+
+# tomorrow ill finish this i promise
