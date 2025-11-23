@@ -26,14 +26,14 @@ python github-activity.py <username>
 
 # EXAMPLES
 
-# View your own activity
+1. View your own activity
 python github-activity.py your-username
 
-# View activity of popular developers
+2. View activity of popular developers
 python github-activity.py torvalds
 python github-activity.py kamranahmedse
 
-# Handle invalid users gracefully
+3. Handle invalid users gracefully
 python github-activity.py invalid-user-123
 
 
