@@ -36,13 +36,3 @@ def main():
 if __name__ == "__main__":
     main() 
 
-# testing
-# hello
-
-# still testing
-
-# testing test
-
-# grrr
-
-# tomorrow ill finish this i promise
