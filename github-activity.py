@@ -19,6 +19,10 @@ def main():
     except urllib.error.HTTPError as e:
         if e.code == 404:
             print(f"Error: User '{username}' not found.")
+        elif e.code == 403:
+            print(f"{username} do not grant access to requested resouce.")
+        elif e.code == 503:
+            print("The server is currently unable to handle the request due to temporary overloading or scheduled maintenance. Retry later.")
         else:
             print(f"Error: Github API returned {e.code}")
         return
@@ -37,9 +41,7 @@ def main():
         repo_name = event['repo']['name']
 
         if event_type == 'PushEvent':
-            payload = event.get('payload', {})
-            commit_count = len(payload.get('commits', []))
-            print(f"- Pushed {commit_count} commits to {repo_name}")
+            print(f"- Pushed commit to {repo_name}")
 
         elif event_type == 'IssuesEvent':
             action = event['payload']['action']
